@@ -1,0 +1,22 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/fragmentList">
+
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.example.studentmanager.FragmentList"
+        android:label="Student List">
+        <action
+            android:id="@+id/action_to_addEdit"
+            app:destination="@id/fragmentAddEdit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentAddEdit"
+        android:name="com.example.studentmanager.FragmentAddEdit"
+        android:label="Add/Edit Student">
+        <action
+            android:id="@+id/action_to_list"
+            app:destination="@id/fragmentList" />
+    </fragment>
+</navigation>
